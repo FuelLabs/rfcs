@@ -1,0 +1,12 @@
+[book]
+authors = ["Fuel Labs"]
+language = "en"
+multilingual = false
+src = "text"
+title = "The Fuel RFC Book"
+
+[output.html]
+git-repository-url = "https://github.com/FuelLabs/rfcs"
+
+[rust]
+edition = "2018"
