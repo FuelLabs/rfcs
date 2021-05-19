@@ -6,15 +6,32 @@
 # Summary
 [summary]: #summary
 
-One paragraph explanation of the feature.
+Rust uses the release train strategy for its release cycle and benefits from a highly robust regressions test codebase. This way, the stable toolchain flags the API stability and not the functionality stability. For libraries under heavy development such as ours, the API is per nature prone to change. API stability brings small or no benefit compared to the benefits provided by the nightly features.
 
 # Motivation
 [motivation]: #motivation
 
-Why are we doing this? What use cases does it support? What is the expected outcome?
+As opposed to normal agile flows, the release train stable cycle relies on longer iterations. This means any codebase developed under stable will be, by definition, outdated.
+
+Traditionally, the libraries are developed under nightly in the Rust ecosystem, and only after the first major release do they consider switching to stable. The most classic example is Rocket - a four years old project that only recently is targetting stable.
+
+The main misconception about nightly regards the meaning of stable for Rust. Quoting the Rust book:
+
+```
+Rust uses a technique called “feature flags” to determine what features are enabled in a given release. If a new feature is under active development, it lands on master, and therefore, in nightly, but behind a feature flag.
+```
+[link](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html)
+
+This means that features under development are protected in nightly and not available in stable. These features rely on compiler directives and cannot ever be used by accident. The implication of that is we have a reflection of stable as a subset of nightly where we do not have any unstable features flag. Hence, nightly ultimately supersede stable.
+
+The main advantage of nightly is we have our codebase updated for upcoming major - and important - changes in the Rust environment. The next major change is the [2021 release](https://blog.rust-lang.org/2021/05/11/edition-2021.html) that brings many benefits - especially the [new resolver scheme](https://doc.rust-lang.org/cargo/reference/resolver.html#feature-resolver-version-2).
+
+Besides that, nightly also makes available several small helpers that are very unlikely to contain inner instabilities such as [is_sorted](https://doc.rust-lang.org/std/primitive.slice.html#method.is_sorted). These helpers can significantly improve the coding efficiency without importing additional libraries or reimplementing classical algorithms.
 
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
+
+!! TBD !!
 
 Explain the proposal as if it was already included in the product and you were teaching it to another developer. That generally means:
 
@@ -29,6 +46,8 @@ For implementation-oriented RFCs (e.g. for compiler internals), this section sho
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
+!! TBD !!
+
 This is the technical portion of the RFC. Explain the design in sufficient detail that:
 
 - Its interaction with other features is clear.
@@ -40,10 +59,16 @@ The section should return to the examples given in the previous section, and exp
 # Drawbacks
 [drawbacks]: #drawbacks
 
-Why should we *not* do this?
+By using nightly we need to pay extra attention during the PR reviews to evaluate trade-offs when using unstable features.
+
+Also, there is a chance the used features will have their API reworked, and this will imply code update. This may lead to the need of freezing the CI versions to some specific release while these updates are not done.
+
+The language tooling of Rust is well known to be very unstable with nightly. This impacts mainly `rustfmt` and `rls - Rust Language Server`. The community created [this panel](https://rust-lang.github.io/rustup-components-history/) to keep track of the available tools.
 
 # Rationale and alternatives
 [rationale-and-alternatives]: #rationale-and-alternatives
+
+!! TBD !!
 
 - Why is this design the best in the space of possible designs?
 - What other designs have been considered and what is the rationale for not choosing them?
@@ -51,6 +76,8 @@ Why should we *not* do this?
 
 # Prior art
 [prior-art]: #prior-art
+
+!! TBD !!
 
 Discuss prior art, both the good and the bad, in relation to this proposal.
 A few examples of what this can include are:
@@ -69,12 +96,16 @@ Please also take into consideration that Fuel sometimes intentionally diverges f
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
 
+!! TBD !!
+
 - What parts of the design do you expect to resolve through the RFC process before this gets merged?
 - What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
 - What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
 
 # Future possibilities
 [future-possibilities]: #future-possibilities
+
+!! TBD !!
 
 Think about what the natural extension and evolution of your proposal would
 be and how it would affect the language and project as a whole in a holistic
