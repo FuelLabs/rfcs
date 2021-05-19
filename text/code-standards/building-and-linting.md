@@ -1,7 +1,7 @@
 Building and Linting
 ===
 
-CI should enforce the following criteria across all projects:
+CI should enforce the following criteria across all Rust projects:
 
 * Pull requests should fail to build if there are any compiler warnings.
 * Code formatting should pass `cargo fmt --all -- --check`
