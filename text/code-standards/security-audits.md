@@ -1,5 +1,4 @@
-Security Auditing
-====
+# Security Auditing
 
 All CI pipelines should use [cargo audit](https://rustsec.org/) to check for any known vulnerabilities in the 
 dependency graph. If the audit fails, the build should fail until fixed. 

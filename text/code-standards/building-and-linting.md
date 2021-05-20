@@ -1,5 +1,4 @@
-Building and Linting
-===
+# Building and Linting
 
 CI should enforce the following criteria across all Rust projects:
 
