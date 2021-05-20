@@ -1,1 +1,0 @@
-# The Fuel RFC Book

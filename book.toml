@@ -2,7 +2,6 @@
 authors = ["Fuel Labs"]
 language = "en"
 multilingual = false
-src = "text"
 title = "The Fuel RFC Book"
 
 [output.html]
