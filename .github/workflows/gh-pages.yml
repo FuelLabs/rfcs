@@ -20,6 +20,14 @@ jobs:
 
       - run: ./generate-book.sh
 
+      - name: Create config file
+        run: |
+          echo "{ \"replacementPatterns\": [ { \"pattern\": \"^/\", \"replacement\": \"/github/workspace/\" } ] }" > config.json
+      - name: Check links
+        uses: gaurav-nelson/github-action-markdown-link-check@1.0.4
+        with:
+          config-file: config.json
+
       - name: Deploy latest
         uses: peaceiris/actions-gh-pages@v3
         with:
