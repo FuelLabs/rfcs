@@ -2,7 +2,8 @@
 
 CI should enforce the following criteria across all Rust projects:
 
-* Pull requests should fail to build if there are any compiler warnings.
+* Pull requests should be blocked if the build action fails.
+* The build action should deny all warnings.
 * Code formatting should pass `cargo fmt --all -- --check`
 * Code must pass `cargo clippy`
 
@@ -14,3 +15,12 @@ the set of lints are needed. Once the core sets of lints are configured for a
 project, `#[allow(...)]` exceptions should be placed nearest to the failure
 rather than globally at the `clippy.toml` file. An example of this may be when
 a Rust upgrade causes codegen from a macro to fail the updated lints.
+
+## Standard Lints
+
+These lints are considered standard for every crate in the Fuel ecosystem.
+
+```rust
+#![warn(missing_docs)]
+#![forbid(unsafe_code)]
+```
