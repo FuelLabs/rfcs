@@ -26,8 +26,6 @@ can be used to evaluate code submissions.
 
 [guide-level-explanation]: #guide-level-explanation
 
-See the [code standard text](./../code-standards/README.md).
-
 Code standards live in the RFC repo, since they can be considered as an
 appendix to this RFC. These standards may be replicated to other locations for
 ease of access, but the version here will be considered the source of truth.
