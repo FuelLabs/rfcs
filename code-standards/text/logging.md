@@ -1,6 +1,6 @@
 # Logging
 
-Logging should be done using the [tracing library](https://docs.rs/tracing/0.1.26/tracing/)
+Logging should be done using the [tracing library](https://docs.rs/tracing/)
 to ensure consistent log output from all bins and libs.
 
 | Level | When to use |
