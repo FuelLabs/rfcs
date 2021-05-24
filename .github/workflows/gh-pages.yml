@@ -18,7 +18,11 @@ jobs:
         with:
           mdbook-version: '0.4.7'
 
-      - run: ./generate-book.sh
+      - name: Verify RFCS are included in SUMMARY.md
+        run: ./.ci/verify-book.sh
+
+      - name: Generate the Book
+        run: mdbook build .
 
       - name: Create config file
         run: |
