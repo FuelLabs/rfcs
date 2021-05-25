@@ -6,6 +6,7 @@ src = "text"
 title = "The Fuel RFC Book"
 
 [output.html]
+no-section-label = true
 git-repository-url = "https://github.com/FuelLabs/rfcs"
 
 [rust]
