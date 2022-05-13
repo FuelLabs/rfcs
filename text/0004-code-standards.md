@@ -54,7 +54,7 @@ Using an RFC process to manage code style and standards
 by the rust-lang team.
 
 As far as specific standards, Rust has
-[API design guidelines](https://rust-lang-nursery.github.io/api-guidelines/).
+[API design guidelines](https://rust-lang.github.io/api-guidelines/).
 
 ## Unresolved questions
 
