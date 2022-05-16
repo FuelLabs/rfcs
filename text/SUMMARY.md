@@ -1,10 +1,9 @@
+# Summary
+
 [The Fuel RFC Book](./README.md)
 
-# RFCS
-
-- [0004-code-standards](./0004-code-standards.md)
-
-# Code Standards
+- [RFCs](./rfcs/README.md)
+  - [0004-code-standards](./rfcs/0004-code-standards.md)
 
 - [Code Standards](./code-standards/README.md)
   - [Rust Versions](./code-standards/rust-compiler-version.md)
