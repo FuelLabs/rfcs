@@ -10,4 +10,4 @@ no-section-label = true
 git-repository-url = "https://github.com/FuelLabs/rfcs"
 
 [rust]
-edition = "2018"
+edition = "2021"
