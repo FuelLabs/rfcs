@@ -12,7 +12,7 @@
 
 6. __PR Submission__: When submitting a pull request, the contributor should provide a clear explanation of the changes made and their motivations behind the proposed modifications. It's recommended to include links to any related open issues in the PR description to make it easy for reviewers to understand the context and the problem that the code is trying to solve.
 
-7. __Sign-Off__: All pull requests from external contributors will need to be signed off by at least two internal contributors before they can be merged. This helps to ensure that changes are properly reviewed and that the quality of the codebase is maintained. It also allows for more experienced developers to mentor less experienced ones and help improve their contributions.
+7. __Sign Off__: All pull requests from external contributors will need to be signed off by at least two internal contributors before they can be merged. This helps to ensure that changes are properly reviewed and that the quality of the codebase is maintained. It also allows for more experienced developers to mentor less experienced ones and help improve their contributions.
 
 8. __Compliance__: All contributions must adhere to the project's open-source license and the contributor must agree to the terms of the license before submitting their code. This helps to ensure that the project stays in compliance with legal and ethical guidelines, and protects the rights of all parties involved.
 
