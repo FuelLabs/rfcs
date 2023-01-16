@@ -10,10 +10,12 @@
 
 5. __Security__: All code should be checked for potential security vulnerabilities. It is important to make security a top priority and regularly check and test code for any potential vulnerabilities.
 
-6. __PR Submission__: When submitting a pull request, the contributor should provide a clear explanation of the changes made and their motivations behind the proposed modifications. It's recommended to include links to any related open issues in the PR description to make it easy for reviewers to understand the context and the problem that the code is trying to solve.
+6. __Safety > Performance__: Correctness of code must be guaranteed before `unsafe` code will be considered for review. Requests for the inclusion of `unsafe` code should be accompanied by benchmarks that demonstrate a measurable performance improvement, and/or code comments that clearly explain why the `unsafe` code is necessary before the code is considered for review.
 
-7. __Sign Off__: All pull requests from external contributors will need to be signed off by at least two internal contributors before they can be merged. This helps to ensure that changes are properly reviewed and that the quality of the codebase is maintained. It also allows for more experienced developers to mentor less experienced ones and help improve their contributions.
+7. __PR Submission__: When submitting a pull request, the contributor should provide a clear explanation of the changes made and their motivations behind the proposed modifications. It's recommended to include links to any related open issues in the PR description to make it easy for reviewers to understand the context and the problem that the code is trying to solve.
 
-8. __Compliance__: All contributions must adhere to the project's open-source license and the contributor must agree to the terms of the license before submitting their code. This helps to ensure that the project stays in compliance with legal and ethical guidelines, and protects the rights of all parties involved.
+8. __Sign Off__: All pull requests from external contributors will need to be signed off by at least two internal contributors before they can be merged. This helps to ensure that changes are properly reviewed and that the quality of the codebase is maintained. It also allows for more experienced developers to mentor less experienced ones and help improve their contributions.
+
+9. __Compliance__: All contributions must adhere to the project's open-source license and the contributor must agree to the terms of the license before submitting their code. This helps to ensure that the project stays in compliance with legal and ethical guidelines, and protects the rights of all parties involved.
 
 By following these standards, external contributors can help to ensure that their code is of high-quality and easy to review. Adhering to these standards makes the project more reliable, sustainable, and maintainable in the long run, benefiting the project, community and the contributors.
