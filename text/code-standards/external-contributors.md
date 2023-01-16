@@ -1,6 +1,6 @@
 # Code Review Standards for External Contributors
 
-1. __Code Line Limit__: All pull requests should not exceed 500 lines of code. This helps to ensure that changes are small and easy to review, making it less likely for bugs to be introduced and easier to understand the changes. It also keeps the pull requests manageable in size and reduces the time needed for reviewing and approving.
+1. __Code Line Limit__: Pull requests should aim to not exceed 500 lines of additions. This helps to ensure that changes are small and easy to review, making it less likely for bugs to be introduced and easier to understand the changes. It also keeps the pull requests manageable in size and reduces the time needed for reviewing and approving.
 
 2. __Code Quality__: Code should be clean, well-organized, and easy to read. It should follow the existing coding style and conventions used in the project. This makes the codebase consistent and easy to understand, which will help to maintain the project over time. 
 
