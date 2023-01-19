@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>RFCs - The Fuel RFC Book</title>
+        <title>External Contributors - The Fuel RFC Book</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">The Fuel RFC Book</a></li><li class="chapter-item expanded "><a href="../rfcs/index.html" class="active">RFCs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rfcs/0004-code-standards.html">0004-code-standards</a></li></ol></li><li class="chapter-item expanded "><a href="../code-standards/index.html">Code Standards</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-standards/rust-compiler-version.html">Rust Versions</a></li><li class="chapter-item expanded "><a href="../code-standards/building-and-linting.html">Building and Linting</a></li><li class="chapter-item expanded "><a href="../code-standards/logging.html">Logging</a></li><li class="chapter-item expanded "><a href="../code-standards/security-audits.html">Security Audits</a></li><li class="chapter-item expanded "><a href="../code-standards/semver.html">SemVer</a></li><li class="chapter-item expanded "><a href="../code-standards/api-design.html">API Design</a></li><li class="chapter-item expanded "><a href="../code-standards/external-contributors.html">External Contributors</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">The Fuel RFC Book</a></li><li class="chapter-item expanded "><a href="../rfcs/index.html">RFCs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rfcs/0004-code-standards.html">0004-code-standards</a></li></ol></li><li class="chapter-item expanded "><a href="../code-standards/index.html">Code Standards</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-standards/rust-compiler-version.html">Rust Versions</a></li><li class="chapter-item expanded "><a href="../code-standards/building-and-linting.html">Building and Linting</a></li><li class="chapter-item expanded "><a href="../code-standards/logging.html">Logging</a></li><li class="chapter-item expanded "><a href="../code-standards/security-audits.html">Security Audits</a></li><li class="chapter-item expanded "><a href="../code-standards/semver.html">SemVer</a></li><li class="chapter-item expanded "><a href="../code-standards/api-design.html">API Design</a></li><li class="chapter-item expanded "><a href="../code-standards/external-contributors.html" class="active">External Contributors</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,22 +167,48 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="rfcs"><a class="header" href="#rfcs">RFCs</a></h1>
+                        <h1 id="code-review-standards-for-external-contributors"><a class="header" href="#code-review-standards-for-external-contributors">Code Review Standards for External Contributors</a></h1>
+<ol>
+<li>
+<p><strong>Code Line Limit</strong>: Pull requests should aim to not exceed 500 lines of additions. This helps to ensure that changes are small and easy to review, making it less likely for bugs to be introduced and easier to understand the changes. It also keeps the pull requests manageable in size and reduces the time needed for reviewing and approving.</p>
+</li>
+<li>
+<p><strong>Code Quality</strong>: Code should be clean, well-organized, and easy to read. It should follow the existing coding style and conventions used in the project. This makes the codebase consistent and easy to understand, which will help to maintain the project over time. </p>
+</li>
+<li>
+<p><strong>Comments</strong>: Code should be well-documented, providing explanations for the purpose, design, and reasoning of the code. Comments assist in clarifying the intent of the code, making it easier for others to work with and understand, even if they were not familiar with it previously. They also aid in making sure that others can comprehend the modifications made and how they fit into the overall project.</p>
+</li>
+<li>
+<p><strong>Test Coverage</strong>: All new code should be accompanied by unit tests that thoroughly exercise the new functionality. This helps to ensure that the code is working as intended and will continue to work correctly in the future. </p>
+</li>
+<li>
+<p><strong>Security</strong>: All code should be checked for potential security vulnerabilities. It is important to make security a top priority and regularly check and test code for any potential vulnerabilities.</p>
+</li>
+<li>
+<p><strong>Safety &gt; Performance</strong>: Correctness of code must be guaranteed before <code>unsafe</code> code will be considered for review. Requests for the inclusion of <code>unsafe</code> code should be accompanied by benchmarks that demonstrate a measurable performance improvement, and/or code comments that clearly explain why the <code>unsafe</code> code is necessary before the code is considered for review.</p>
+</li>
+<li>
+<p><strong>PR Submission</strong>: When submitting a pull request, the contributor should provide a clear explanation of the changes made and their motivations behind the proposed modifications. It's recommended to include links to any related open issues in the PR description to make it easy for reviewers to understand the context and the problem that the code is trying to solve.</p>
+</li>
+<li>
+<p><strong>Sign Off</strong>: All pull requests from external contributors will need to be signed off by at least two internal contributors before they can be merged. This helps to ensure that changes are properly reviewed and that the quality of the codebase is maintained. It also allows for more experienced developers to mentor less experienced ones and help improve their contributions.</p>
+</li>
+<li>
+<p><strong>Compliance</strong>: All contributions must adhere to the project's open-source license and the contributor must agree to the terms of the license before submitting their code. This helps to ensure that the project stays in compliance with legal and ethical guidelines, and protects the rights of all parties involved.</p>
+</li>
+</ol>
+<p>By following these standards, external contributors can help to ensure that their code is of high-quality and easy to review. Adhering to these standards makes the project more reliable, sustainable, and maintainable in the long run, benefiting the project, community and the contributors.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../code-standards/api-design.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
-                        
-                            <a rel="next" href="../rfcs/0004-code-standards.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -192,15 +218,11 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../code-standards/api-design.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
-                
-                    <a rel="next" href="../rfcs/0004-code-standards.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                 
             </nav>
 
