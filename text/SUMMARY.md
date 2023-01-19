@@ -12,3 +12,4 @@
   - [Security Audits](./code-standards/security-audits.md)
   - [SemVer](./code-standards/semver.md)
   - [API Design](./code-standards/api-design.md)
+  - [External Contributors](./code-standards/external-contributors.md)
