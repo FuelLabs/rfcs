@@ -64,6 +64,8 @@ impl MultiTokenContract for Contract {
 
 In this example, the contract includes functions for minting, transferring, querying balances, and checking the total supply of a specific token type, as specified by the `token_id` parameter.
 
+The `token_id` is used along with the `ContractId` of the currently executing contract to get an `AssetId` with the following pseudocode: `asset_id = sha256((contract_id, token_id))` 
+
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
