@@ -1,7 +1,7 @@
 - Feature Name: native-multi-token
 - Start Date: 2023-04-30
-- RFC PR: [fuel-labs/rfcs#0000](https://github.com/FuelLabs/rfcs/pull/0000)
-- Issue: [fuel-labs/<PROJECT>#0000](https://github.com/FuelLabs/<PROJECT>/issues/0000)
+- RFC PR: [fuel-labs/rfcs#17](https://github.com/FuelLabs/rfcs/pull/17)
+- Issue: [fuel-labs/rfcs#18](https://github.com/FuelLabs/rfcs/issues/18)
 
 # Summary
 [summary]: #summary
