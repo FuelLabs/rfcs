@@ -37,46 +37,46 @@ use std::{
 };
 
 abi MultiTokenContract {
-    fn mint(token_id: u64, amount: u64, recipient: Address);
-    fn transfer(token_id: u64, amount: u64, recipient: Address);
-    fn balance_of(token_id: u64, owner: Address) -> u64;
-    fn total_supply(token_id: u64) -> u64;
+    fn mint(sub_id: u64, amount: u64, recipient: Address);
+    fn transfer(sub_id: u64, amount: u64, recipient: Address);
+    fn balance_of(sub_id: u64, owner: Address) -> u64;
+    fn total_supply(sub_id: u64) -> u64;
 }
 
 impl MultiTokenContract for Contract {
-    fn mint(token_id: u64, amount: u64, recipient: Address) {
-        mint_to_address(token_id, amount, recipient);
+    fn mint(sub_id: u64, amount: u64, recipient: Address) {
+        mint_to_address(sub_id, amount, recipient);
     }
 
-    fn transfer(token_id: u64, amount: u64, recipient: Address) {
-        transfer_to_address(token_id, amount, recipient);
+    fn transfer(sub_id: u64, amount: u64, recipient: Address) {
+        transfer_to_address(sub_id, amount, recipient);
     }
 
-    fn balance_of(token_id: u64, owner: Address) -> u64 {
-        balance_of(token_id, owner)
+    fn balance_of(sub_id: u64, owner: Address) -> u64 {
+        balance_of(sub_id, owner)
     }
 
-    fn total_supply(token_id: u64) -> u64 {
-        total_supply(token_id)
+    fn total_supply(sub_id: u64) -> u64 {
+        total_supply(sub_id)
     }
 }
 ```
 
-In this example, the contract includes functions for minting, transferring, querying balances, and checking the total supply of a specific token type, as specified by the `token_id` parameter.
+In this example, the contract includes functions for minting, transferring, querying balances, and checking the total supply of a specific token type, as specified by the `sub_id` parameter.
 
-The `token_id` is used along with the `ContractId` of the currently executing contract to get an `AssetId` with the following pseudocode: `asset_id = sha256((contract_id, token_id))` 
+The `sub_id` is used along with the `ContractId` of the currently executing contract to get an `AssetId` with the following pseudocode: `asset_id = sha256((contract_id, sub_id))` 
 
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
-To implement ERC-1155 multi-token support, we will extend the standard library with a new module, std::multitoken. This module will provide all the functions seen in the std::token module, such as mint, burn, transfer, balance_of, and total_supply. Each of these functions will take an additional token_id parameter of type u64 to specify which token type is being acted upon.
+To implement ERC-1155 multi-token support, we will extend the standard library with a new module, std::multitoken. This module will provide all the functions seen in the std::token module, such as mint, burn, transfer, balance_of, and total_supply. Each of these functions will take an additional sub_id parameter of type u64 to specify which token type is being acted upon.
 
-Contracts will be updated to use the new std::multitoken module for handling multiple tokens. The original std::token will change its underlying implementation to always use the 0 token id. This implementation will make it so all the previous contracts using the token module will not have any breaking changes, and will also ensure theres a simpler single token api available for simple applications which only need 1 token, whilst still functioning under the same standard.
+Contracts will be updated to use the new std::multitoken module for handling multiple tokens. The original std::token will change its underlying implementation to always use the 0 sub_id. This implementation will make it so all the previous contracts using the token module will not have any breaking changes, and will also ensure theres a simpler single token api available for simple applications which only need 1 token, whilst still functioning under the same standard.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-Having two modules for multi-token and single-token functions might be confusing. If the token module is replaced with the new functionality of multi-tokens then simple contracts which only need one token may be burdened with having to deal with adding a 0 token id to all their function calls. It would also break all contracts using the token module.
+Having two modules for multi-token and single-token functions might be confusing. If the token module is replaced with the new functionality of multi-tokens then simple contracts which only need one token may be burdened with having to deal with adding a 0 sub_id to all their function calls. It would also break all contracts using the token module.
 
 # Rationale and alternatives
 [rationale-and-alternatives]: #rationale-and-alternatives
