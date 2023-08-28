@@ -1,3 +1,3 @@
 # Rust Compiler Versions
 
-RFC in progress [here](https://github.com/FuelLabs/rfcs/pull/6).
+Use Rust 2021 ( [related PR for discussion](https://github.com/FuelLabs/rfcs/pull/6) ).
