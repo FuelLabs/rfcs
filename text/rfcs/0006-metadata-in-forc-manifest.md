@@ -15,7 +15,7 @@ _Note: This document will describe the change in the context of a indexer-specif
 
 ## Guide-Level Explanation
 
-_Indexing-specific metadata_ refers to the set of information necessary to allow for an indexing service to begin processing resultant data from contract execution.The service should use this information to create distinct and separate tables for contract data as well as route creation on a publicly-available querying API.
+_Indexing-specific metadata_ refers to the set of information necessary to allow for an indexing service to begin processing resultant data from contract execution. The service should use this information to create distinct and separate tables for contract data as well as route creation on a publicly-available querying API.
 
 Consider the following example of a Forc project manifest: 
 ```
