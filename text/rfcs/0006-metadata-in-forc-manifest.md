@@ -9,7 +9,7 @@ An optional section describing metadata should be added to the Forc manifest.
 
 ## Motivation
 
-The objective of this change is to allow a Sway contract developer to describe arbitrary information that will be available for Forc plugins to process. The immediate use of this change will be to allow for Sway contract developers to specify information for indexing the contract in the Forc manifest, if desired. The expected outcome is that developers will be able to define indexing-specific _metadata_ in the same place and manner that they define other important information, e.g. authoring information, dependencies, etc.
+The objective of this change is to allow a Sway developer to describe arbitrary information that will be available for Forc plugins to process. The immediate use of this change will be to allow for Sway contract developers to specify information for indexing the contract in the Forc manifest, if desired. The expected outcome is that developers will be able to define indexing-specific _metadata_ in the same place and manner that they define other important information, e.g. authoring information, dependencies, etc.
 
 _Note: This document will describe the change in the context of a indexer-specific example._
 
