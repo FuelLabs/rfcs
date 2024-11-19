@@ -28,5 +28,4 @@ These lints are considered standard for every crate in the Fuel ecosystem.
 ## Unused Dependencies
 
 Each repo should have CI rules to prevent unused dependencies.
-This can be automated using the tool
-[cargo-udeps](https://crates.io/crates/cargo-udeps).
+This can be automated using the tool [cargo-udeps](https://github.com/est31/cargo-udeps).
