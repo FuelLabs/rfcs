@@ -83,7 +83,7 @@ The [Cargo manifest format](https://doc.rust-lang.org/cargo/reference/manifest.h
 
 ### Fuel Indexer
 
-The original version of the Fuel indexer uses [a YAML manifest](https://docs.fuel.network/docs/indexer/project-components/manifest/) that contains the necessary data to start processing and storing blockchain data in a database; it contained the same data specified in the example snippet above as well as other metadata used to change the behavior of contract indexing.
+The original version of the Fuel indexer uses [a YAML manifest](https://github.com/FuelLabs/fuel-indexer/blob/develop/docs/src/project-components/manifest.md) that contains the necessary data to start processing and storing blockchain data in a database; it contained the same data specified in the example snippet above as well as other metadata used to change the behavior of contract indexing.
 
 In the next implementation of the indexer, all of the fields that were present in the original manifest will not be necessary. A user should only have to specify the namespace and identifier in an `index` section of the metadata section of `Forc.toml`.   A `forc index` plugin will locate and process the contract ABI in order to generate the schema file; it will then modify the Forc manifest to add the `schema_path` field to the aforementioned section. If necessary, the original sections may be added as a new indexer service is built out; however, the only things that will be required to build out the artifacts that will be uploaded to the service.
 
